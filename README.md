@@ -2,6 +2,8 @@
 
 A full-stack Next.js web app that aggregates the best domain deals from multiple registrars in real-time.
 
+**Live demo:** https://domainsale-2ewyocsws-huyzpka-s-projects.vercel.app
+
 ## Features
 
 - **Real-time data** from Porkbun's public pricing API
