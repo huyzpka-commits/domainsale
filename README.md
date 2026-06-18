@@ -105,6 +105,20 @@ docker compose up -d
 ```
 
 ### Vercel
+
+#### Auto-deploy via GitHub Actions
+1. Push code to GitHub.
+2. Create a new project on [Vercel Dashboard](https://vercel.com/dashboard).
+3. Go to **Settings > General > Project ID** and copy the Project ID.
+4. Go to **Settings > General > Team ID** (or your personal account ID) and copy the Organization ID.
+5. Create a Vercel token at **Settings > Tokens**.
+6. In your GitHub repository, go to **Settings > Secrets and variables > Actions** and add:
+   - `VERCEL_TOKEN` — your Vercel token
+   - `VERCEL_ORG_ID` — your Vercel organization/team ID
+   - `VERCEL_PROJECT_ID` — your Vercel project ID
+7. Every push to `main` will now automatically deploy to Vercel.
+
+#### Manual deploy
 ```bash
 npm i -g vercel
 vercel deploy
