@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "standalone", // Required for Docker
+  // Use standalone output for Docker; default output for Vercel
+  output: process.env.VERCEL ? undefined : "standalone",
   reactStrictMode: true,
   async headers() {
     return [
